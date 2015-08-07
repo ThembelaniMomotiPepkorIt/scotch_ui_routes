@@ -1,15 +1,24 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>scotch_ui_router</title>
-		<script src="app.js"></script>
-	</head>
+<div class="row">
+	<div class="col-sm-8 col-sm-offset-2">
+		<div id="form-container">
+			<div class="page-header text-center">
+				<h2>Let's Be Friends</h2>
 
-	<body>
-		<h1>This is a test</h1>
+				<div id="status-buttons" class="text-center">
+					<a ui-sref-active="active" ui-sref=".profile"><span>1</span>Profile</a>
+					<a ui-sref-active="active" ui-sref=".interests"><span>2</span>Interests</a>
+					<a ui-sref-active="active" ui-sref=".payment"><span>3</span>Payment</a>
+				</div>
 
-	</body>
+			</div>
+			<form id="signup-form" ng-submit="processForm()">
+				<div id="form-views" ui-view></div>
+			</form>
+			
+		</div>
 
-	<html>
-
-<html>
+		<pre>
+			{{formData}}
+		</pre>
+	</div>
+</div>
